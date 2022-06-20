@@ -3,8 +3,10 @@ const { Router } = require('express')
 const router = Router()
 
 // Test route
-router.use('/test', (req, res) => {
-  res.end('Test API!')
+router.get('/test', (req, res) => {
+  res.json({'content':'Test API!'})
 })
+
+
 
 module.exports = router
